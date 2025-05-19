@@ -7,3 +7,4 @@ class Node:
         s = 0
         for i in self.nodes:
             s = s + i.value
+        return s

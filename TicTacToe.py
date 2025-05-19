@@ -25,12 +25,30 @@ def check_for_win_condition(b):
     return None
 
 
+def check_board_state(sequence):
+    result = {"X": -1, "0": 1, None: 0}
+    board = [
+        [" ", " ", " "],
+        [" ", " ", " "],
+        [" ", " ", " "],
+    ]
+    user = 0
+    for k in sequence:
+        i, j = k
+        board[i][j]
+        if user:
+            board[i][j] = "0"
+        else:
+            board[i][j] = "X"
+        user = not user
+    return result[check_for_win_condition(board)]
+
+
 board = [
     [" ", " ", " "],
     [" ", " ", " "],
     [" ", " ", " "],
 ]
-
 
 run = True
 user = 0
